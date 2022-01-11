@@ -1,2 +1,3 @@
 # speele_atminas
 Es te biju!!!
+un te ari...
