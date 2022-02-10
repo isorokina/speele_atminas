@@ -42,27 +42,41 @@
 <div class="content">
     <h3 class='virsraksts'>Sveiks  </h3>
     <div class="game">
-        <div class="block" id="L0">
+        <div class="block" id="L0" onclik="veiktGājienu('L0')">
            <div> 😃</div>
          </div>
-        <div class="block" id="L1">
+        <div class="block" id="L1" onclik="veiktGājienu('L1')">
          <div>😆</div>
          </div>
-        <div class="block" id="L2">
+        <div class="block" id="L2" onclik="veiktGājienu('L2')">
          <div>😘</div>
          </div>
-        <div class="block" id="L3">
+        <div class="block" id="L3" onclik="veiktGājienu('L3')">
          <div> 😆</div>
          </div>
-        <div class="block" id="L4">
+        <div class="block" id="L4" onclik="veiktGājienu('L4')">
          <div>😃</div>
          </div>
-        <div class="block" id="L5">
+        <div class="block" id="L5" onclik="veiktGājienu('L5')">
          <div>😘</div>
          </div>
     </div>
 </div>
    </div><!--beidzās wrapper-->
 
+<script>
+   let laukumsSaturs=['😃','😆','😘','😆','😃','😘']
+   let atvertieLaukumi=[]
+   let pedejieDivi=[]
+
+   function veiktGajienu(laukums)
+   {
+      console.log(laukums)
+
+      document.querySelector('#'+laukums+'div').style.display="block"
+
+      atvertieLaukumi.push(laukums)
+   }
+</script>
 </body>
 </html>
