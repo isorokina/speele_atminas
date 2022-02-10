@@ -50,10 +50,30 @@
    const valsts="Latvija"
    vaards="Laura"
    let vards2="Šodien ir laba diena!!!"
+   let klase=['Jānis', 'Laura', 'Jana']
+   klase[3]='Uģis'
+
+   let skoleens={
+      vaards:'Jānis',
+      vecums:16,
+      'patīk datori':'jā'
+   }
+   skoleens['vaards']
+
+   let json=[
+      {
+         vaards:'Jānis',
+         vecums:16
+      },
+      {
+         vaards:'Jana',
+         vecums:17
+      }
+   ]
 
 
    console.log('beigas ir')
-   document.querySelector('.virsraksts').innerHTML='abc'
+   document.querySelector('.virsraksts').innerHTML='Vārds:'+vaards
 </script>
 </body>
 </html>
