@@ -42,11 +42,25 @@
 <div class="content">
     <h3 class="virsraksts">Noteikumu teksts</h3>
     <h3 id="virsraksts">Noteikumu teksts</h3>
+    Vārds:<input id="vaards"/>
+    <br/>
+    Vecums:<input id="vecums"/>
+    <br/>
+    Reģions:
+    <select id="regions">
+
+      <option value="vidzeme"> Vidzeme </option>
+      <option value="latgale"> Latgale </option>
+      <option value="kurzeme"> Kurzeme </option>
+      <option value="zemgale"> Vidzeme </option>
+    </select>
+    <button onclick="saktSpeli()"> Sākt </button> 
+
 
 </div>
    </div><!--beidzās wrapper-->
 <script>
-   let vaards
+   /*let vaards
    const valsts="Latvija"
    vaards="Laura"
    let vards2="Šodien ir laba diena!!!"
@@ -74,6 +88,7 @@
 
    console.log('beigas ir')
    document.querySelector('.virsraksts').innerHTML='Vārds:'+vaards
+   */
 </script>
 </body>
 </html>
