@@ -74,18 +74,45 @@
       let atvertsJaunsLaukums=false
       if(atvertieLaukumi.indexOf(laukums)==-1)
       {
-         atvertsJaunsLaukums=false
+         atvertsJaunsLaukums=true
       }
       else
       {
-         atvertsJaunsLaukums=true
+         atvertsJaunsLaukums=false
       }
       
-      console.log(atvertsJaunsLaukums)
+
+      if(atvertsJaunsLaukums)
+      {
 
       document.querySelector('#'+laukums+'div').style.display="block"
+      pedejieDivi.push(laukums)
+      }
+      if(pedejieDivi.lenght==2)
+      {
+         let atverts1=pedejieDivi[0].replace('L','')
+         let atverts2=pedejieDivi[1].replace('L','')
+         
+         atverts1=parseInt(atvert1,10)
+         atverts2=parseInt(atvert2,10)
+         if(laukumsSaturs[atverts1]==laukumsSaturs[atverts2])
+         {
+            console.log('atvērti vienādi')
+            atvertieLaukumi.push(laukums)
+            
+         }
+         else
+         {
+            console.log('nav atvērti vienādi')
+            document.querySelect('#'+pedejieDivi[0]+' div').style.display='none'
+            document.querySelect('#'+pedejieDivi[1]+' div').style.display='none'
 
-      atvertieLaukumi.push(laukums)
+         }
+         pedejieDivi=[]
+         
+
+      }
+
       if(laukumuSaturs.lenght==atvertieLaukumi.lenght)
       {
          alert('Apsveicam!')
